@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on ティアいなだ</title>
+        <link>https://kamomechan.github.io/tags/</link>
+        <description>Recent content in Tags on ティアいなだ</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>ティアいなだ</copyright>
+        <lastBuildDate>Sun, 22 Oct 2023 12:54:54 +0800</lastBuildDate><atom:link href="https://kamomechan.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Huginn</title>
+        <link>https://kamomechan.github.io/tags/huginn/</link>
+        <pubDate>Sun, 22 Oct 2023 12:54:54 +0800</pubDate>
+        
+        <guid>https://kamomechan.github.io/tags/huginn/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>RSS</title>
+        <link>https://kamomechan.github.io/tags/rss/</link>
+        <pubDate>Sun, 22 Oct 2023 12:54:54 +0800</pubDate>
+        
+        <guid>https://kamomechan.github.io/tags/rss/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Telegram Bot</title>
+        <link>https://kamomechan.github.io/tags/telegram-bot/</link>
+        <pubDate>Sun, 22 Oct 2023 12:54:54 +0800</pubDate>
+        
+        <guid>https://kamomechan.github.io/tags/telegram-bot/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Nitter</title>
+        <link>https://kamomechan.github.io/tags/nitter/</link>
+        <pubDate>Sun, 22 Oct 2023 12:50:29 +0800</pubDate>
+        
+        <guid>https://kamomechan.github.io/tags/nitter/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Twitter</title>
+        <link>https://kamomechan.github.io/tags/twitter/</link>
+        <pubDate>Sun, 22 Oct 2023 12:50:29 +0800</pubDate>
+        
+        <guid>https://kamomechan.github.io/tags/twitter/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>pip</title>
+        <link>https://kamomechan.github.io/tags/pip/</link>
+        <pubDate>Sun, 22 Oct 2023 12:46:19 +0800</pubDate>
+        
+        <guid>https://kamomechan.github.io/tags/pip/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Python</title>
+        <link>https://kamomechan.github.io/tags/python/</link>
+        <pubDate>Sun, 22 Oct 2023 12:46:19 +0800</pubDate>
+        
+        <guid>https://kamomechan.github.io/tags/python/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

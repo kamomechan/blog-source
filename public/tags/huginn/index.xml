@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Huginn on ティアいなだ</title>
+        <link>https://kamomechan.github.io/tags/huginn/</link>
+        <description>Recent content in Huginn on ティアいなだ</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>ティアいなだ</copyright>
+        <lastBuildDate>Sun, 22 Oct 2023 12:54:54 +0800</lastBuildDate><atom:link href="https://kamomechan.github.io/tags/huginn/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>如何制作一个 RSS 源</title>
+        <link>https://kamomechan.github.io/p/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA-rss-%E6%BA%90/</link>
+        <pubDate>Sun, 22 Oct 2023 12:54:54 +0800</pubDate>
+        
+        <guid>https://kamomechan.github.io/p/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA-rss-%E6%BA%90/</guid>
+        <description>&lt;img src="https://kamomechan.github.io/p/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA-rss-%E6%BA%90/cover.png" alt="Featured image of post 如何制作一个 RSS 源" /&gt;&lt;p&gt;如果你对 RSS 有一定的了解，可以查看右边的索引，跳转到自己需要的地方唷&amp;gt;&amp;lt;&lt;/p&gt;
+&lt;h2 id=&#34;什么是-rss-呢&#34;&gt;什么是 RSS 呢&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;del&gt;梦开始的地方&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;简单来说，RSS就像是一个新闻订阅服务，用户可以通过订阅自己喜欢的网站的RSS源，获取这些网站的最新内容和更新，而无需每次都去访问这些网站。用户可以将订阅的RSS源集中在一个地方，方便浏览和阅&lt;br&gt;
+读。 -ChatGPT&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;如何使用-rss-源&#34;&gt;如何使用 RSS 源&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.rsshub.app/zh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RSSHub&lt;/a&gt; 提供了一些公共RSS源，搜索自己喜欢的网站进行查找&lt;/p&gt;
+&lt;p&gt;这里以月幕Gal RSS源为例：&lt;/p&gt;
+&lt;img title=&#34;&#34; src=&#34;1.png&#34; alt=&#34;RSSHub&#34; data-align=&#34;inline&#34; width=&#34;341&#34;&gt;
+&lt;img title=&#34;&#34; src=&#34;2.png&#34; alt=&#34;RSS Hub&#34; width=&#34;685&#34;&gt;
+&lt;p&gt;最后的最后，复制链接到RSS阅读器，点击添加订阅就可以啦w&lt;/p&gt;
+&lt;p&gt;Twitter的RSS源可以看这篇：&lt;a class=&#34;link&#34; href=&#34;https://tia-chan.top/2023/10/02/nitter-rss-403-%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nitter 403 的解决方案&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;手机端RSS阅读器可以使用开源的 &lt;a class=&#34;link&#34; href=&#34;https://f-droid.org/packages/com.nononsenseapps.feeder/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Feeder&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;电脑端RSS阅读器可以使用开源的 &lt;a class=&#34;link&#34; href=&#34;https://github.com/yang991178/fluent-reader/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Fluent Reader&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;想要全平台同步可以使用公共&lt;a class=&#34;link&#34; href=&#34;https://t.me/RSStT_Bot&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Telegram机器人&lt;/a&gt;订阅RSS源，由于是公共的可能会有延迟，下面将会介绍如何部署一个自己的Telegram机器人wwww&lt;/p&gt;
+&lt;h2 id=&#34;如何制作自己的-rss-源&#34;&gt;如何制作自己的 RSS 源&lt;/h2&gt;
+&lt;p&gt;&lt;del&gt;呜呜呜呜呜呜！找不到自己喜欢的RSS源怎么办，那当然是去&lt;a class=&#34;link&#34; href=&#34;https://github.com/DIYgod/RSSHub/issues&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RSSHub&lt;/a&gt;上提issues呀&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;那人家也不理我怎么办qwq&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;那就自己来做一个！利用&lt;a class=&#34;link&#34; href=&#34;https://github.com/huginn/huginn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;huginn&lt;/a&gt;制作RSS源&lt;/p&gt;
+&lt;h3 id=&#34;1-下载安装篇&#34;&gt;1. 下载安装篇&lt;/h3&gt;
+&lt;h4 id=&#34;11-在linux中安装docker&#34;&gt;1.1 在linux中安装docker&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -fsSL get.docker.com -o get-docker.shsudo sh get-docker.sh --mirror Aliyun
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;12-启动docker容器等待一分钟左右&#34;&gt;1.2 启动docker容器（等待一分钟左右）&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-apache&#34; data-lang=&#34;apache&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;screen&lt;/span&gt; -S huginndocker run -it -p &lt;span class=&#34;m&#34;&gt;3000&lt;/span&gt;:3000 ghcr.io/huginn/huginn
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;最后 &lt;code&gt;ctrl+a+d&lt;/code&gt; 退出 screen&lt;/p&gt;
+&lt;h4 id=&#34;13-在浏览器中打开huginn&#34;&gt;1.3 在浏览器中打开Huginn&lt;/h4&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://localhost:3000/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:3000&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;localhost替换为你自己的ip，然后打开（如图）&lt;/p&gt;
+&lt;img src=&#34;3.png&#34; title=&#34;&#34; alt=&#34;Huginn&#34; width=&#34;471&#34;&gt;
+&lt;p&gt;点击login，用户名与密码分别默认为admin与password&lt;/p&gt;
+&lt;h4 id=&#34;14-设置账户&#34;&gt;1.4 设置账户&lt;/h4&gt;
+&lt;p&gt;为保证账户安全，点击account菜单，选择account修改账户密码&lt;/p&gt;
+&lt;img title=&#34;&#34; src=&#34;4.png&#34; alt=&#34;&#34; width=&#34;696&#34;&gt;
+&lt;h3 id=&#34;2-为huginn使用做准备&#34;&gt;2. 为Huginn使用做准备&lt;/h3&gt;
+&lt;h4 id=&#34;21-准备phantomjscloudhttpsdashboardphantomjscloudcomapikey&#34;&gt;2.1 准备 &lt;a class=&#34;link&#34; href=&#34;https://dashboard.phantomjscloud.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;phantomjscloud&lt;/a&gt; Apikey&lt;/h4&gt;
+&lt;p&gt;需要注册一个&lt;a class=&#34;link&#34; href=&#34;https://dashboard.phantomjscloud.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;phantomjscloud&lt;/a&gt;账户，用来渲染动态网页成静态页面，注册好后从中获取ApiKey&lt;/p&gt;
+&lt;img title=&#34;&#34; src=&#34;5.png&#34; alt=&#34;Phantomjscloud&#34; width=&#34;694&#34;&gt;
+&lt;h4 id=&#34;22-在huginn中新建凭证credentials&#34;&gt;2.2 在Huginn中新建凭证（Credentials）&lt;/h4&gt;
+&lt;p&gt;在Huginn中使用ApiKey&lt;/p&gt;
+&lt;img src=&#34;6.png&#34; title=&#34;&#34; alt=&#34;Huginn&#34; width=&#34;700&#34;&gt;
+&lt;img title=&#34;&#34; src=&#34;7.png&#34; alt=&#34;Huginn&#34; width=&#34;727&#34;&gt;
+&lt;h3 id=&#34;3-如何使用huginn&#34;&gt;3. 如何使用Huginn&lt;/h3&gt;
+&lt;h4 id=&#34;31-概述&#34;&gt;3.1 概述&lt;/h4&gt;
+&lt;p&gt;一共分为4步：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;利用PhantomJs agent将动态网页转成静态网页&lt;/li&gt;
+&lt;li&gt;利用Website agent解析提取文章标题&lt;/li&gt;
+&lt;li&gt;利用Website agent解析提取文章内容&lt;/li&gt;
+&lt;li&gt;利用DataOutputAgent将解析的东西转成RSS源&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;32-将动态网页转成静态网页&#34;&gt;3.2 将动态网页转成静态网页&lt;/h4&gt;
+&lt;p&gt;这里以制作&lt;a class=&#34;link&#34; href=&#34;https://www.keyfc.net/bbs/showtopiclist.aspx?type=newtopic&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Keyfc论坛&lt;/a&gt; RSS源为例&lt;/p&gt;
+&lt;p&gt;点击新建代理（Agent）（没有说明的内容默认就行，不需要填写）&lt;/p&gt;
+&lt;img title=&#34;&#34; src=&#34;8.png&#34; alt=&#34;Huginn&#34; width=&#34;665&#34;&gt;
+&lt;hr&gt;
+&lt;img title=&#34;&#34; src=&#34;9.png&#34; alt=&#34;&#34; width=&#34;427&#34;&gt;
+&lt;hr&gt;
+&lt;img title=&#34;&#34; src=&#34;10.png&#34; alt=&#34;&#34; width=&#34;424&#34;&gt;
+&lt;p&gt;User agent：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-apache&#34; data-lang=&#34;apache&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;Mozilla/5&lt;/span&gt;.&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Windows&lt;/span&gt; NT &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;33-提取文章标题与时间&#34;&gt;3.3 提取文章标题与时间&lt;/h4&gt;
+&lt;p&gt;点击新建代理（Agent）（Website Agent类型）&lt;/p&gt;
+&lt;img title=&#34;&#34; src=&#34;11.png&#34; alt=&#34;&#34; width=&#34;422&#34;&gt;
+&lt;hr&gt;
+&lt;img title=&#34;&#34; src=&#34;12.png&#34; alt=&#34;&#34; width=&#34;474&#34;&gt;
+&lt;p&gt;获取xpath路径可以用f12弹出控制台，然后点击选择元素，之后在页面中选择标题&lt;/p&gt;
+&lt;img title=&#34;&#34; src=&#34;13.png&#34; alt=&#34;&#34; width=&#34;509&#34;&gt;
+&lt;p&gt;点击文章标题可以看见这个样子&lt;/p&gt;
+&lt;img title=&#34;&#34; src=&#34;14.png&#34; alt=&#34;&#34; width=&#34;694&#34;&gt;
+&lt;p&gt;我们可以在控制台看见文章标题，右键选中，点击copy full xpath&lt;/p&gt;
+&lt;img src=&#34;15.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;716&#34;&gt;
+&lt;p&gt;可以看见完整的xpath路径是这个样子的&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tbody&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;th&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;由于不同文章的xpath路径有可能不同，所以我们需要对这个路径做一些修改(不然抓取的文章只有这一个)&lt;/p&gt;
+&lt;p&gt;我们主要通过对比不同文章之间的xpath路径进行修改&lt;/p&gt;
+&lt;p&gt;以相同方式，复制第二篇文章完整xpath路径，如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tbody&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;th&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;方法&lt;/strong&gt;：找不同，来删除 &lt;del&gt;（快背，快背，考试要考的&amp;gt;&amp;lt;）&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;通过对比，可以看见最后的部分不同，删除不同之处，可以得到下面的xpath&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tbody&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;th&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;那有的时候通过对比，没有不同之处怎么办呢？&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;笨&amp;hellip;笨蛋！不修改不就行了嘛&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;以相同的方式获取发布时间&lt;/p&gt;
+&lt;img title=&#34;&#34; src=&#34;16.png&#34; alt=&#34;&#34; width=&#34;732&#34;&gt;
+&lt;p&gt;分别获取的第一篇与第二篇文章的发布时间&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tbody&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;td&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;em&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tbody&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;td&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;em&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;删除两者不同的地方，得到一下内容&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tbody&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;td&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;em&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;点击两次Dry Run运行下看看&lt;/p&gt;
+&lt;img src=&#34;17.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;517&#34;&gt;
+&lt;img title=&#34;&#34; src=&#34;18.png&#34; alt=&#34;&#34; width=&#34;559&#34;&gt;
+&lt;p&gt;抓取成功啦，但是url有些问题，可以使用模板（template）使它们拼接起来&lt;/p&gt;
+&lt;img title=&#34;&#34; src=&#34;19.png&#34; alt=&#34;&#34; width=&#34;385&#34;&gt;
+&lt;hr&gt;
+&lt;img title=&#34;&#34; src=&#34;20.png&#34; alt=&#34;&#34; width=&#34;457&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-handlebars&#34; data-lang=&#34;handlebars&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;x&#34;&gt;&amp;#34;template&amp;#34;: &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    &amp;#34;url1&amp;#34;: &amp;#34;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;to_uri&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;response_.url&lt;/span&gt; &lt;span class=&#34;cp&#34;&gt;}}&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;#34;  }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;点击两次Dry Run运行下看看&lt;/p&gt;
+&lt;img src=&#34;21.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;366&#34;&gt;
+&lt;p&gt;完成！&lt;/p&gt;
+&lt;h4 id=&#34;34-提取文章内容&#34;&gt;3.4 提取文章内容&lt;/h4&gt;
+&lt;p&gt;点击新建代理（Agent）（Website Agent类型）&lt;/p&gt;
+&lt;img title=&#34;&#34; src=&#34;22.png&#34; alt=&#34;&#34; width=&#34;366&#34;&gt;
+&lt;img src=&#34;23.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;460&#34;&gt;
+&lt;p&gt;点击标题链接查看文章内容，并以相同方式获取xpath路径&lt;/p&gt;
+&lt;img title=&#34;&#34; src=&#34;24.png&#34; alt=&#34;&#34; width=&#34;656&#34;&gt;
+&lt;p&gt;分别获取的第一篇与第二篇文章的内容xpath路径&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;form&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tbody&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;td&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;form&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tbody&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;td&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;通过对比没有不同之处，不需要修改&lt;/p&gt;
+&lt;img title=&#34;&#34; src=&#34;25.png&#34; alt=&#34;&#34; width=&#34;681&#34;&gt;
+&lt;hr&gt;
+&lt;img title=&#34;&#34; src=&#34;26.png&#34; alt=&#34;&#34; width=&#34;684&#34;&gt;
+&lt;p&gt;完成！&lt;/p&gt;
+&lt;h4 id=&#34;35-转成rss源&#34;&gt;3.5 转成RSS源&lt;/h4&gt;
+&lt;img src=&#34;27.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;388&#34;&gt;
+&lt;hr&gt;
+&lt;img title=&#34;&#34; src=&#34;28.png&#34; alt=&#34;&#34; width=&#34;442&#34;&gt;
+&lt;hr&gt;
+&lt;img src=&#34;29.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;674&#34;&gt;
+&lt;p&gt;点击actions菜单，选择show&lt;/p&gt;
+&lt;img src=&#34;30.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;502&#34;&gt;
+&lt;p&gt;这个后缀为.xml的链接就是你做的RSS源啦（啪唧啪唧，鼓掌www）&lt;/p&gt;
+&lt;h4 id=&#34;36-常见问题&#34;&gt;3.6 常见问题&lt;/h4&gt;
+&lt;p&gt;如果遇到下面的working状态为no&lt;/p&gt;
+&lt;img src=&#34;31.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;686&#34;&gt;
+&lt;p&gt;记得点击抓取标题的那个代理的event created（即keyfc 1）&lt;/p&gt;
+&lt;img src=&#34;32.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;694&#34;&gt;
+&lt;p&gt;重新发送一个就好啦（记得不要发送相同的内容，不然会重复）&lt;/p&gt;
+&lt;img src=&#34;33.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;708&#34;&gt;
+&lt;h2 id=&#34;部署-telegram-rss-reader-bot&#34;&gt;部署 Telegram RSS Reader Bot&lt;/h2&gt;
+&lt;p&gt;项目地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/Rongronggg9/RSS-to-Telegram-Bot&#34;  title=&#34;RSS-to-Telegram-Bot&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bot&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;1-部署&#34;&gt;1. 部署&lt;/h3&gt;
+&lt;h4 id=&#34;11-下载安装篇&#34;&gt;1.1 下载安装篇&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-awk&#34; data-lang=&#34;awk&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;mkdir&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;rssttcd&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;rssttwget&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/raw.githubusercontent.com/Rongronggg9/RSS-to-Telegram-Bot/dev/docker-compose.yml.sample -O docker-compose.yml&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;12-准备与配置&#34;&gt;1.2 准备与配置&lt;/h4&gt;
+&lt;p&gt;转向 &lt;a class=&#34;link&#34; href=&#34;https://t.me/BotFather&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@BotFather&lt;/a&gt; ，发送 &lt;code&gt;/newbot&lt;/code&gt; 创建一个新的机器人，获取 &lt;code&gt;token&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;转向 &lt;a class=&#34;link&#34; href=&#34;https://t.me/userinfobot&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@userinfobot&lt;/a&gt; 获取您的用户 ID（环境变量：）&lt;code&gt;MANAGER&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://api.telegra.ph/createAccount?short_name=RSStT&amp;amp;author_name=Generated%20by%20RSStT&amp;amp;author_url=https%3A%2F%2Fgithub.com%2FRongronggg9%2FRSS-to-Telegram-Bot&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;获取 Telegraph API 访问令牌&lt;/a&gt;（环境变量：）&lt;code&gt;TELEGRAPH_TOKEN&lt;/code&gt;。每次获得新令牌时刷新页面。如果您有很多订阅，请确保获得至少 5 个代币。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://kamomechan.github.io/p/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA-rss-%E6%BA%90/34.png&#34;
+	width=&#34;1024&#34;
+	height=&#34;44&#34;
+	srcset=&#34;https://kamomechan.github.io/p/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA-rss-%E6%BA%90/34_hu2c5d53276f0a2ba94a509c4e169e9894_27901_480x0_resize_box_3.png 480w, https://kamomechan.github.io/p/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA-rss-%E6%BA%90/34_hu2c5d53276f0a2ba94a509c4e169e9894_27901_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;2327&#34;
+		data-flex-basis=&#34;5585px&#34;
+	
+&gt;
+
+&lt;/p&gt;
+&lt;p&gt;编辑 docker-compose.yml 文件，替换 &lt;code&gt;token&lt;/code&gt; , &lt;code&gt;MANAGER&lt;/code&gt; , &lt;code&gt;TELEGRAPH_TOKEN&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-nginx&#34; data-lang=&#34;nginx&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;vi&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;docker-compose.yml&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;更新&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ebnf&#34; data-lang=&#34;ebnf&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;docker-compose up -d&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;完结撒花！！&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
