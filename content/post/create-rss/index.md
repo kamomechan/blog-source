@@ -50,15 +50,15 @@ Twitter的RSS源可以看这篇：[Nitter 403 的解决方案](https://tia-chan.
 
 那就自己来做一个！利用[huginn](https://github.com/huginn/huginn/)制作RSS源
 
-### 1. 下载安装篇
+### 下载安装篇
 
-#### 1.1 在linux中安装docker
+#### 在linux中安装docker
 
 ```dsconfig
 curl -fsSL get.docker.com -o get-docker.shsudo sh get-docker.sh --mirror Aliyun
 ```
 
-#### 1.2 启动docker容器（等待一分钟左右）
+#### 启动docker容器（等待一分钟左右）
 
 ```apache
 screen -S huginndocker run -it -p 3000:3000 ghcr.io/huginn/huginn
@@ -66,7 +66,7 @@ screen -S huginndocker run -it -p 3000:3000 ghcr.io/huginn/huginn
 
 最后 `ctrl+a+d` 退出 screen
 
-#### 1.3 在浏览器中打开Huginn
+#### 在浏览器中打开Huginn
 
 [http://localhost:3000](http://localhost:3000/)
 
@@ -76,21 +76,21 @@ localhost替换为你自己的ip，然后打开（如图）
 
 点击login，用户名与密码分别默认为admin与password
 
-#### 1.4 设置账户
+#### 设置账户
 
 为保证账户安全，点击account菜单，选择account修改账户密码
 
 <img title="" src="4.png" alt="" width="696">
 
-### 2. 为Huginn使用做准备
+### 为Huginn使用做准备
 
-#### 2.1 准备 [phantomjscloud](https://dashboard.phantomjscloud.com/) Apikey
+#### 准备 [phantomjscloud](https://dashboard.phantomjscloud.com/) Apikey
 
 需要注册一个[phantomjscloud](https://dashboard.phantomjscloud.com/)账户，用来渲染动态网页成静态页面，注册好后从中获取ApiKey
 
 <img title="" src="5.png" alt="Phantomjscloud" width="694">
 
-#### 2.2 在Huginn中新建凭证（Credentials）
+#### 在Huginn中新建凭证（Credentials）
 
 在Huginn中使用ApiKey
 
@@ -98,9 +98,9 @@ localhost替换为你自己的ip，然后打开（如图）
 
 <img title="" src="7.png" alt="Huginn" width="727">
 
-### 3. 如何使用Huginn
+### 如何使用Huginn
 
-#### 3.1 概述
+#### 概述
 
 一共分为4步：
 
@@ -109,7 +109,7 @@ localhost替换为你自己的ip，然后打开（如图）
 3. 利用Website agent解析提取文章内容
 4. 利用DataOutputAgent将解析的东西转成RSS源
 
-#### 3.2 将动态网页转成静态网页
+#### 将动态网页转成静态网页
 
 这里以制作[Keyfc论坛](https://www.keyfc.net/bbs/showtopiclist.aspx?type=newtopic) RSS源为例
 
@@ -131,7 +131,7 @@ User agent：
 Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36
 ```
 
-#### 3.3 提取文章标题与时间
+#### 提取文章标题与时间
 
 点击新建代理（Agent）（Website Agent类型）
 
@@ -222,7 +222,7 @@ Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chro
 
 完成！
 
-#### 3.4 提取文章内容
+#### 提取文章内容
 
 点击新建代理（Agent）（Website Agent类型）
 
@@ -250,7 +250,7 @@ Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chro
 
 完成！
 
-#### 3.5 转成RSS源
+#### 转成RSS源
 
 <img src="27.png" title="" alt="" width="388">
 
@@ -268,7 +268,7 @@ Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chro
 
 这个后缀为.xml的链接就是你做的RSS源啦（啪唧啪唧，鼓掌www）
 
-#### 3.6 常见问题
+#### 常见问题
 
 如果遇到下面的working状态为no
 
@@ -286,15 +286,15 @@ Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chro
 
 项目地址：[Bot](https://github.com/Rongronggg9/RSS-to-Telegram-Bot "RSS-to-Telegram-Bot")
 
-### 1. 部署
+### 部署
 
-#### 1.1 下载安装篇
+#### 下载安装篇
 
 ```awk
 mkdir rssttcd rssttwget https://raw.githubusercontent.com/Rongronggg9/RSS-to-Telegram-Bot/dev/docker-compose.yml.sample -O docker-compose.yml
 ```
 
-#### 1.2 准备与配置
+#### 准备与配置
 
 转向 [@BotFather](https://t.me/BotFather) ，发送 `/newbot` 创建一个新的机器人，获取 `token`
 
