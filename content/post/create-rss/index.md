@@ -1,6 +1,6 @@
 +++
 title = '如何制作一个 RSS 源'
-date = 2023-10-22T12:54:54+08:00
+date = 2023-10-15T12:54:54+08:00
 categories = [
     "RSS",
     "Telegram Bot",
@@ -34,13 +34,13 @@ image = "cover.png"
 
 最后的最后，复制链接到RSS阅读器，点击添加订阅就可以啦w
 
-Twitter的RSS源可以看这篇：[Nitter 403 的解决方案](https://tia-chan.top/2023/10/02/nitter-rss-403-%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88/)
+Twitter的RSS源可以看这篇：[Nitter Rss 403 的解决方案](https://tia-chan.top/p/nitter-rss-403-%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/)
 
 手机端RSS阅读器可以使用开源的 [Feeder](https://f-droid.org/packages/com.nononsenseapps.feeder/)
 
 电脑端RSS阅读器可以使用开源的 [Fluent Reader](https://github.com/yang991178/fluent-reader/releases)
 
-想要全平台同步可以使用公共[Telegram机器人](https://t.me/RSStT_Bot)订阅RSS源，由于是公共的可能会有延迟，下面将会介绍如何部署一个自己的Telegram机器人wwww
+想要全平台同步可以使用公共 [Telegram机器人](https://t.me/RSStT_Bot) 订阅RSS源，由于是公共的可能会有延迟，下面将会介绍如何部署一个自己的Telegram机器人wwww
 
 ## 如何制作自己的 RSS 源
 

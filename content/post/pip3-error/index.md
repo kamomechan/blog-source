@@ -1,6 +1,6 @@
 +++
 title = 'pip3 install 报错的解决方案'
-date = 2023-10-22T12:46:19+08:00
+date = 2023-10-05T12:46:19+08:00
 categories = [
     "Python"
 ]

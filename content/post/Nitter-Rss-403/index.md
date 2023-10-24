@@ -1,6 +1,6 @@
 +++
 title = 'Nitter Rss 403 的解决方案'
-date = 2023-10-22T12:50:29+08:00
+date = 2023-10-10T12:50:29+08:00
 categories = [
     "RSS",
 ]

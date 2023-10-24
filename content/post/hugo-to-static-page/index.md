@@ -2,11 +2,11 @@
 title = '如何利用 Hugo 生成静态页面'
 date = 2023-10-23T16:01:10+08:00
 categories = [
-    "Web",
-    "Hugo"
+    "Web"
 ]
 tags = [
-    
+    "Web",
+    "Hugo"
 ]
 image = "cover.jpg"
 +++
@@ -85,7 +85,7 @@ hugo server
 localhost:1313
 ```
 
-<img title="" src="file:///C:/Users/Administrator/AppData/Roaming/marktext/images/2023-10-23-18-09-24-image.png" alt="" width="757">
+<img title="" src="2.png" alt="" width="757">
 
 如图，我这里使用的是hugo-theme-stack主题，需要配置自定义样式
 
