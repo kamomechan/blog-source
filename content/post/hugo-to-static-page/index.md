@@ -140,7 +140,7 @@ zh-cn 中的title表示侧边栏/网站的名称，weight表示语言所在的�
 
 DefaultContentLanguage 需要把语言改为 zh-cn
 
-### 修改头像
+### 修改侧边栏头像
 
 在 config.yaml 文件中我们可以看见下列代码
 
@@ -159,6 +159,22 @@ sidebar:
 修改一下就好啦
 
 如果不想要 ```emoji``` 可以删掉，```subtitle``` 表示个性签名，你可以自定义
+
+### 修改标签页图标
+
+打开 config.yaml 找到以下内容
+
+```yaml
+favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+```
+
+根据提示完善代码 (修改成下面的样子)
+
+```yaml
+favicon: /favicon.ico # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+```
+
+自定义图标存放在 static/favicon.ico 路径下
 
 ### 修改关联社交账号
 
