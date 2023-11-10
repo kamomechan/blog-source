@@ -61,10 +61,14 @@ curl -fsSL get.docker.com -o get-docker.shsudo sh get-docker.sh --mirror Aliyun
 #### 启动docker容器（等待一分钟左右）
 
 ```apache
-screen -S huginndocker run -it -p 3000:3000 ghcr.io/huginn/huginn
+docker run --restart always -d -p 3000:3000 ghcr.io/huginn/huginn
 ```
 
-最后 `ctrl+a+d` 退出 screen
+#### 开放指定端口
+
+```shell
+sudo ufw allow 3000
+```
 
 #### 在浏览器中打开Huginn
 
@@ -272,15 +276,9 @@ Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chro
 
 如果遇到下面的working状态为no
 
+不用担心，这是正常现象，页面更新的时候会自动变成yes
+
 <img src="31.png" title="" alt="" width="686">
-
-记得点击抓取标题的那个代理的event created（即keyfc 1）
-
-<img src="32.png" title="" alt="" width="694">
-
-重新发送一个就好啦（记得不要发送相同的内容，不然会重复）
-
-<img src="33.png" title="" alt="" width="708">
 
 ## 部署 Telegram RSS Reader Bot
 
@@ -291,7 +289,9 @@ Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chro
 #### 下载安装篇
 
 ```awk
-mkdir rssttcd rssttwget https://raw.githubusercontent.com/Rongronggg9/RSS-to-Telegram-Bot/dev/docker-compose.yml.sample -O docker-compose.yml
+mkdir rsstt
+cd rsstt
+wget https://raw.githubusercontent.com/Rongronggg9/RSS-to-Telegram-Bot/dev/docker-compose.yml.sample -O docker-compose.yml
 ```
 
 #### 准备与配置
@@ -307,7 +307,7 @@ mkdir rssttcd rssttwget https://raw.githubusercontent.com/Rongronggg9/RSS-to-Tel
 编辑 docker-compose.yml 文件，替换 `token` , `MANAGER` , `TELEGRAPH_TOKEN`
 
 ```nginx
-vi docker-compose.yml
+vim docker-compose.yml
 ```
 
 更新
@@ -317,3 +317,7 @@ docker-compose up -d
 ```
 
 完结撒花！！
+
+
+
+

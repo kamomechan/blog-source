@@ -249,8 +249,8 @@ sudo vim /etc/nginx/nginx.conf
 > 一般使用基础配置就可以啦，高级设置的提速，反正我是感觉不到的qwq
 
 ```
-     # gzip_comp_level 6;
-     # gzip_min_length 1000;
+# gzip_comp_level 6;
+# gzip_min_length 1000;
 ```
 
 **gzip_comp_level** 表示压缩级别（0~9），值越高，压缩级别也就越高，cpu算力也就越高（建议保持中等水平4）
@@ -270,5 +270,3 @@ nginx -s reload
 ```
 
 完成！！
-
-

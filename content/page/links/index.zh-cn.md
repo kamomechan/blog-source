@@ -1,7 +1,7 @@
 ---
 title: 链接
 links:
-  - title: KeyFansClub
+  - title: Key Fans Club
     description: KEY社作品讨论与同人创作相关的清新主题大众站
     website: https://keyfc.com
     image: https://keyfc.com/bbs/favicon.ico
@@ -13,6 +13,10 @@ links:
     description: The visual novel database
     website: https://vndb.org/
     image: https://vndb.org/favicon.ico
+  - title: Online Image Optimizer
+    description: 图片压缩
+    website: https://imagecompressor.com/
+    image: https://imagecompressor.com/images/imagecompressor/favicon.png
 menu:
     main: 
         weight: -50
@@ -21,6 +25,5 @@ menu:
 
 comments: false
 ---
-
 
 
