@@ -20,7 +20,7 @@ tags = [
 ### 克隆仓库
 
 ```shell
-git clone  https://github.com/albertincx/formatbot1.git
+git clone https://github.com/albertincx/formatbot1.git
 cd formatbot1
 ```
 

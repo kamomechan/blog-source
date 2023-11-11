@@ -20,7 +20,7 @@ image = "cover.png"
 > ~~梦开始的地方~~
 > 
 > 简单来说，RSS就像是一个新闻订阅服务，用户可以通过订阅自己喜欢的网站的RSS源，获取这些网站的最新内容和更新，而无需每次都去访问这些网站。用户可以将订阅的RSS源集中在一个地方，方便浏览和阅  
-> 读。 -ChatGPT
+> 读。 ——ChatGPT
 
 ## 如何使用 RSS 源
 
@@ -88,7 +88,7 @@ localhost替换为你自己的ip，然后打开（如图）
 
 ### 为Huginn使用做准备
 
-#### 准备 [phantomjscloud](https://dashboard.phantomjscloud.com/) Apikey
+#### 准备 Api key
 
 需要注册一个[phantomjscloud](https://dashboard.phantomjscloud.com/)账户，用来渲染动态网页成静态页面，注册好后从中获取ApiKey
 
@@ -241,7 +241,8 @@ Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chro
 分别获取的第一篇与第二篇文章的内容xpath路径
 
 ```css
-/html/body/div[4]/div[5]/div/form[1]/div/table[1]/tbody[1]/tr/td[2]/div[4]/div[2]/div/html/body/div[4]/div[5]/div/form[1]/div/table[1]/tbody[1]/tr/td[2]/div[4]/div[2]/div
+/html/body/div[4]/div[5]/div/form[1]/div/table[1]/tbody[1]/tr/td[2]/div[4]/div[2]/div
+/html/body/div[4]/div[5]/div/form[1]/div/table[1]/tbody[1]/tr/td[2]/div[4]/div[2]/div
 ```
 
 通过对比没有不同之处，不需要修改
@@ -317,7 +318,3 @@ docker-compose up -d
 ```
 
 完结撒花！！
-
-
-
-

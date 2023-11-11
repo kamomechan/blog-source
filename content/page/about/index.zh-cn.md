@@ -16,3 +16,5 @@ menu:
 如果你对视觉小说感兴趣的话，欢迎进群来玩哟
 
 [Telegram: @VisualNovelClub](https://t.me/VisualNovelClub)
+
+
