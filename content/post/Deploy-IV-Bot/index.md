@@ -82,6 +82,8 @@ TGPHTOKEN_6=telegra.ph token
 
 ```
 MESSAGE_QUEUE=来自cloudamqp的url
+TASKS_DEV=test1DEV
+TASKS2_DEV=test2DEV
 ```
 
 ### 安装 chrome
@@ -109,5 +111,5 @@ apt-get install -f
 ## 运行
 
 ```shell
-yarn dev or PORT=CUSTOM_PORT yarn dev
+yarn dev
 ```
