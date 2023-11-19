@@ -17,7 +17,7 @@ languages:
 disqusShortname: hugo-theme-stack
 
 # GA Tracking ID
-googleAnalytics:
+googleAnalytics: G-4DYSPCS97S
 
 # Theme i18n support
 # Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
@@ -197,7 +197,7 @@ menu:
               
         - identifier: email
           name: Email
-          url: mailto:une4xt8m0@mozmail.com
+          url: mailto:whrfrk1y2@mozmail.com
           params:
               newTab: true
               icon: brand-email
