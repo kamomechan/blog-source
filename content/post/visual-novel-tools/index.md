@@ -18,13 +18,11 @@ image = "cover.jpg"
 
 由于视觉小说补丁的发布页可能在各种各样奇奇怪怪的地方，不太好找，后来知道了 [VNDB](https://vndb.org)（视觉小说数据库），于是便根据 [RSSHub](https://docs.rsshub.app/zh/joinus/new-rss/start-code) ~~照葫芦画瓢~~写了一个关于VNDB的RSS源，已经稳定运行半年了，**パチパチ**
 
-[官方中文](https://vndb.org/r?q=&o=d&s=released&f=06741122wzh_dHans-2wzh_dHant-Ng014owinjwsteam-N48N68022gja4gco): https://rss.tia-chan.top/vndb/offi-ch
+[官方中文/Official TL](https://vndb.org/r?q=&o=d&s=released&f=05741132gen2wzh_dHans-2wzh_dHant-N48033gjaNc0181Q-Ng01bgin): https://rss.tia-chan.top/vndb/official
 
-[民间汉化](https://vndb.org/r?q=&o=d&s=released&f=04741Ng114owin122wzh_dHans-2wzh_dHant-): https://rss.tia-chan.top/vndb/uo-ch
+[民间汉化](https://vndb.org/r?q=&o=d&s=released&f=04741Ng11122wzh_dHans-2wzh_dHant-Nd01): https://rss.tia-chan.top/vndb/uo-ch
 
-[Official TL](https://vndb.org/r?q=&o=d&s=released&f=067412genNg014owinjwsteam-N48N68022gja4gco): https://rss.tia-chan.top/vndb/offi-en
-
-[Fan TL](https://vndb.org/r?q=&o=d&s=released&f=04741Ng114owin2gen): https://rss.tia-chan.top/vndb/uo-en
+[Fan TL](https://vndb.org/r?q=&o=d&s=released&f=04741Ng112genNd01): https://rss.tia-chan.top/vndb/uo-en
 
 之后添加到rss阅读器就好啦，如果你想要全平台同步的话，欢迎加入频道的说w
 
