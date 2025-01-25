@@ -89,8 +89,6 @@ while true; do
   echo "等待 $INTERVAL 秒后再次检查..."
   sleep $INTERVAL
 done
-
-
 ```
 
 这个脚本会每隔3秒自动遍历下载目录，检查是否有``*.aria2*``  ``*.torrent`` ``recycle`` ``completed`` 以外的文件与目录，若有则会自动上传到云盘，上传完成后则自动删除服务器的本地文件（有个特性就是rclone上传过的目录会把里面的文件遍历删掉，目录却没删，由于空目录占不了多少空间，我也没当回事儿OwO）

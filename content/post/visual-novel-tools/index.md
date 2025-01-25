@@ -12,8 +12,6 @@ tags = [
 image = "cover.jpg"
 +++
 
-
-
 ## RSS订阅源
 
 由于视觉小说补丁的发布页可能在各种各样奇奇怪怪的地方，不太好找，后来知道了 [VNDB](https://vndb.org)（视觉小说数据库），于是便根据 [RSSHub](https://docs.rsshub.app/zh/joinus/new-rss/start-code) ~~照葫芦画瓢~~写了一个关于VNDB的RSS源，已经稳定运行半年了，**パチパチ**
@@ -50,4 +48,4 @@ https://t.me/VisualNovelClub/8/1459
 
 说明：屏蔽了注册与登录页面，以防止源服务器ip注册多个账号被怀疑刷分，从而被ban；另外加了cloudflare反代，不用担心安全上的问题www
 
-视觉小说中文补丁: https://drive.tia-chan.top/
+~~视觉小说中文补丁: https://drive.tia-chan.top/~~
